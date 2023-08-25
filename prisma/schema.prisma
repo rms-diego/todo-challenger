@@ -11,12 +11,14 @@ datasource db {
 }
 
 model Todos {
-  id          String   @id @default(uuid())
+  id          String    @id @default(uuid())
   hero        String
   description String
   userId      String
-  isConclude  Boolean? @default(false)
-  createdAt   DateTime @default(now())
+  isConclude  Boolean?  @default(false)
+  createdAt   DateTime  @default(now())
+  deletedAt   DateTime?
+  updatedAt   DateTime?
 
   Files Files[]
 
