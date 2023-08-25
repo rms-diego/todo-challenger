@@ -6,7 +6,7 @@
   "scripts": {
     "dev": "tsx watch ./src/server.ts",
     "start": "node dist/server.js",
-    "build": "tsup src/*"
+    "build": "prisma generate && tsup src/*"
   },
   "keywords": [],
   "author": "",
@@ -19,6 +19,7 @@
     "typescript": "^5.2.2"
   },
   "dependencies": {
+    "@fastify/cookie": "^9.0.4",
     "@fastify/cors": "^8.3.0",
     "@prisma/client": "^5.2.0",
     "dotenv": "^16.3.1",
